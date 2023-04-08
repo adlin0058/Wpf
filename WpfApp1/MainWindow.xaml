@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="姓名" />
-            <TextBox Text="" />
+            <TextBox Text="" TextChanged="TextBox_TextChanged" />
             <TextBlock Text="年龄" />
             <TextBox Text="" />
             <Button Content="确定" />

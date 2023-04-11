@@ -10,19 +10,27 @@
     Height="450"
     mc:Ignorable="d">
     <Window.Resources>
-        <Style TargetType="Button">
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
             <Setter Property="FontSize" Value="26" />
             <Setter Property="Foreground" Value="red" />
             <Setter Property="Background" Value="Wheat" />
+        </Style>
+        <Style
+            x:Key="ButtonStyle"
+            BasedOn="{StaticResource BaseButtonStyle}"
+            TargetType="Button">
             <Setter Property="Content" Value="button" />
         </Style>
     </Window.Resources>
     <Grid>
         <!--  堆栈面板  -->
         <StackPanel>
-            <Button />
-            <Button />
-            <Button />
+            <Button
+                Background="Blue"
+                Content="Hello1"
+                Style="{StaticResource ButtonStyle}" />
+            <Button Style="{StaticResource ButtonStyle}" />
+            <Button Style="{StaticResource ButtonStyle}" />
         </StackPanel>
     </Grid>
 </Window>
